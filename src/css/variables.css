@@ -1,0 +1,18 @@
+:root {
+    --bg-color: #09090B;
+    --secondary-color: #18181A;
+    --light-color: #E2E8FF;
+
+    --text-color: #d7d7d7;
+    --text-color-hover: #1F1F1F;
+    --text-color-purple: #A78BFA;
+    --active-color: #F2E8FE;
+    
+    --bold: 600;
+    --regular: 400;
+    --light: 300;
+
+    --border-radius-large: 32px;
+    --border-radius-regular: 16px;
+    --border-radius-small: 8px;
+}
