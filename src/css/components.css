@@ -1,0 +1,99 @@
+.home-page__navigation {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 30px;
+    height: 100%;
+}
+
+.home-page__nav-item {
+    width: 100%;
+    max-height: 50%;
+    min-height: 50%;
+    color: var(--text-color-purple);
+    font-weight: var(--bold);
+    border-radius: var(--border-radius-large);
+    min-width: fit-content;
+    padding: 20px;
+    background-color: var(--light-color);
+    transition: transform 0.3s ease;
+}
+
+.home-page__nav-item:hover {
+    transform: scale(1.05);
+}
+
+.project-item {
+    background-color: var(--secondary-color);
+    padding: 20px;
+    border-radius: var(--border-radius-regular);
+    margin-bottom: 20px;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    position: relative;
+}
+
+.project-item:nth-last-child(1) {
+    margin-bottom: 0;
+}
+
+.project-item::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: var(--active-color);
+    clip-path: circle(0% at 0% 100%);
+    transition: clip-path 0.5s ease;
+    z-index: 0;
+}
+
+.project-item:hover::before {
+    clip-path: circle(150% at 0% 100%);
+}
+
+.project-item:hover  {
+    background-color: var(--light-color);
+    color: var(--text-color-hover);
+    transform: scale(1.02);
+}
+
+.project-item__title {
+    font-weight: var(--bold);
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 1;
+}   
+
+.project-item__description {
+    position: relative;
+    z-index: 1;
+}
+
+.modal {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.6);
+    z-index: 10;
+}
+
+.modal__content {
+    width: 400px;
+    padding: 25px;
+    border-radius: var(--border-radius-regular);
+    background: var(--secondary-color);
+}
+
+@media (max-width: 1280px) {    
+    .home-page__navigation {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .home-page__nav-item {
+        max-height: 25%;
+        min-height: 25%;
+    }
+}
